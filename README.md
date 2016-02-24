@@ -14,13 +14,11 @@ are present:
 * /boot/config.txt
   * # Turn off the camera LED
   * disable_camera_led=1
-  * # Set 1-wire GPIO pin number
-  * dtoverlay=w1-gpio,gpiopin=4
-  * device_tree=
-* /etc/modules (the order is important)
+  * # Set 1-wire GPIO on; pin number defaults to 4
+  * dtoverlay=w1-gpio
+  * # device_tree=
+* /etc/modules (the order is important) Jessie has device tree; no longer requires 1-wire module prompts
   * snd-bcm2835
-  * w1-gpio
-  * w1-therm
   * bcm2835_v4l2
   * i2c-bcm2708
   * i2c-dev
